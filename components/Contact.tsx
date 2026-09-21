@@ -35,7 +35,7 @@ export default function Contact() {
           {/* Left - Info */}
           <div>
             <p className="text-neutral-300 text-lg mb-8">
-              Let's build something intelligent together.
+              {"Let's build something intelligent together."}
             </p>
 
             <div className="space-y-6">
