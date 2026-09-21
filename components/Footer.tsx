@@ -1,8 +1,8 @@
 export default function Footer() {
   const socials = [
     { name: "GitHub", href: "https://github.com/geeknishantkyeus" },
-    { name: "LinkedIn", href: "https://linkedin.com/in/yourprofile" },
-    { name: "X", href: "https://x.com/yourhandle" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/nishant-kumar-844607224/" },
+    { name: "X", href: "https://x.com/stay_to_kyeus" },
     { name: "Medium", href: "https://medium.com/@yourusername" },
   ];
 

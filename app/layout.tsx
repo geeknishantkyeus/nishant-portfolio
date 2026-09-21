@@ -12,7 +12,7 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
 });
 
-const siteUrl = "https://geeknishant.tech"; // ← apna domain ya vercel URL
+const siteUrl = "https://www.geeknishant.tech"; // ← apna domain ya vercel URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "AI Developer & Full Stack Engineer building intelligent web apps that solve real problems using code + AI.",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://www.geeknishant.tech/og-image.png",
         width: 1200,
         height: 630,
         alt: "Nishant Kumar — AI Developer",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Nishant Kumar — AI Developer",
     description:
       "AI Developer & Full Stack Engineer building intelligent web apps.",
-    images: ["/og-image.png"],
+    images: ["https://www.geeknishant.tech/og-image.png"],
     creator: "@stay_to_kyeus", // ← apna X handle
   },
   robots: {

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://nishant.dev"; // ← apna domain
+const siteUrl = "https://www.geeknishant.tech"; // ← apna domain
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
