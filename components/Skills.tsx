@@ -1,23 +1,67 @@
 const skills = [
   {
     category: "FRONTEND",
-    items: ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
+    items: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Next.js",
+      "Bootstrap",
+      "Tailwind CSS",
+    ],
   },
   {
     category: "BACKEND",
-    items: ["Node.js", "PHP", "SQL", "MongoDB"],
+    items: ["Node.js", "Express.js", "PHP", "MongoDB", "SQL"],
   },
   {
-    category: "AI / ML",
-    items: ["OpenAI", "Gemini", "LangChain", "RAG"],
+    category: "CYBERSECURITY",
+    items: [
+      "Ethical Hacking",
+      "Penetration Testing",
+      "Network Scanning",
+      "OSINT",
+      "Reconnaissance",
+    ],
   },
   {
-    category: "DEVOPS",
-    items: ["Git", "GitHub", "Vercel", "Docker"],
+    category: "SECURITY TOOLS",
+    items: [
+      "Nmap",
+      "Wireshark",
+      "Burp Suite",
+      "Metasploit",
+      "theHarvester",
+      "Shodan",
+    ],
   },
   {
-    category: "MARKETING",
-    items: ["SEO", "Digital Marketing"],
+    category: "NETWORKING",
+    items: [
+      "TCP/IP",
+      "Subnetting",
+      "CIDR",
+      "Host Discovery",
+      "Port Scanning",
+    ],
+  },
+  {
+    category: "SECURITY FUNDAMENTALS",
+    items: [
+      "CIA Triad",
+      "Risk Assessment",
+      "Rules of Engagement",
+      "Cyber Law",
+    ],
+  },
+  {
+    category: "DEVOPS & OS",
+    items: ["Git", "GitHub", "Vercel", "Linux", "Bash"],
+  },
+  {
+    category: "AI / ML (Basic)",
+    items: ["OpenAI API", "Supervised Learning", "Prompt Engineering"],
   },
 ];
 

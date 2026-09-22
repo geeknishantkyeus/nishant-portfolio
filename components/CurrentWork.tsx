@@ -2,17 +2,17 @@ export default function CurrentWork() {
   const items = [
     {
       label: "Building",
-      title: "AI Study Assistant",
-      tech: "Next.js · OpenAI · Vector DB",
+      title: "Secure web applications",
+      tech: "Next.js · Node.js · MongoDB",
     },
     {
       label: "Learning",
-      title: "LangChain · RAG · AI Agents",
+      title: "Penetration Testing · Bug Bounty · Cloud Security",
       tech: "",
     },
     {
       label: "Writing",
-      title: "AI tutorials on Medium",
+      title: "Security & web dev tutorials on Medium",
       tech: "",
       link: "#blog",
     },
@@ -22,7 +22,6 @@ export default function CurrentWork() {
     <section id="current" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         
-        {/* Heading */}
         <div className="flex items-end justify-between mb-12">
           <h2 className="mono text-2xl md:text-3xl font-bold">
             <span className="text-[#DC143C]">&gt;</span> CURRENT WORK
@@ -30,10 +29,8 @@ export default function CurrentWork() {
           <span className="mono text-sm text-neutral-500">2026</span>
         </div>
 
-        {/* Divider */}
         <div className="dotted-red mb-12" />
 
-        {/* Items */}
         <div className="space-y-8">
           {items.map((item, i) => (
             <div key={i} className="flex flex-col md:flex-row gap-2 md:gap-12">

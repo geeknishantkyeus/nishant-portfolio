@@ -1,8 +1,8 @@
 export default function Footer() {
   const socials = [
     { name: "GitHub", href: "https://github.com/geeknishantkyeus" },
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/nishant-kumar-844607224/" },
-    { name: "X", href: "https://x.com/stay_to_kyeus" },
+    { name: "LinkedIn", href: "https://linkedin.com/in/yourprofile" },
+    { name: "X", href: "https://x.com/yourhandle" },
     { name: "Medium", href: "https://medium.com/@yourusername" },
   ];
 
@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto text-center">
         
         <p className="mono text-sm text-neutral-500 mb-6">
-          Ideas → Code → Build → Break → Repeat
+          Ideas → Code → Secure → Deploy → Repeat
         </p>
 
         <p className="mono text-base text-[#DC143C] mb-12">

@@ -12,24 +12,28 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
 });
 
-const siteUrl = "https://www.geeknishant.tech"; // ← apna domain ya vercel URL
+const siteUrl = "https://www.geeknishant.tech";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Nishant Kumar — AI Developer",
+    default: "Nishant Kumar — Cybersecurity & Full Stack Developer",
     template: "%s — Nishant Kumar",
   },
   description:
-    "AI Developer & Full Stack Engineer building intelligent web apps that solve real problems using code + AI.",
+    "Cybersecurity student & Full Stack Developer. I build secure web applications with React, Next.js, Node.js — and explore ethical hacking, penetration testing, and OSINT.",
   keywords: [
     "Nishant Kumar",
-    "AI Developer",
+    "Cybersecurity",
+    "Ethical Hacking",
+    "Penetration Testing",
     "Full Stack Developer",
     "React Developer",
     "Next.js Developer",
-    "SEO Specialist",
-    "Frontend Developer",
+    "Node.js Developer",
+    "Security Engineer",
+    "OSINT",
+    "Bug Bounty",
     "Portfolio",
   ],
   authors: [{ name: "Nishant Kumar" }],
@@ -44,25 +48,25 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Nishant Kumar",
-    title: "Nishant Kumar — AI Developer",
+    title: "Nishant Kumar — Cybersecurity & Full Stack Developer",
     description:
-      "AI Developer & Full Stack Engineer building intelligent web apps that solve real problems using code + AI.",
+      "Cybersecurity student & Full Stack Developer. Building secure web applications and exploring ethical hacking.",
     images: [
       {
-        url: "https://www.geeknishant.tech/og-image.png",
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Nishant Kumar — AI Developer",
+        alt: "Nishant Kumar — Cybersecurity & Full Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nishant Kumar — AI Developer",
+    title: "Nishant Kumar — Cybersecurity & Full Stack Developer",
     description:
-      "AI Developer & Full Stack Engineer building intelligent web apps.",
-    images: ["https://www.geeknishant.tech/og-image.png"],
-    creator: "@stay_to_kyeus", // ← apna X handle
+      "Cybersecurity student & Full Stack Developer. Building secure web apps.",
+    images: [`${siteUrl}/og-image.png`],
+    creator: "@yourhandle", // ← apna X handle
   },
   robots: {
     index: true,
