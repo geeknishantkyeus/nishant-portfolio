@@ -20,6 +20,7 @@ const skills = [
     items: [
       "Ethical Hacking",
       "Penetration Testing",
+      "Red Team Operations",
       "Network Scanning",
       "OSINT",
       "Reconnaissance",
@@ -34,6 +35,15 @@ const skills = [
       "Metasploit",
       "theHarvester",
       "Shodan",
+    ],
+  },
+  {
+    category: "WEB3 / BLOCKCHAIN",
+    items: [
+      "Blockchain Fundamentals",
+      "Smart Contract Security",
+      "Web3 Basics",
+      "Solidity (Learning)",
     ],
   },
   {
@@ -58,10 +68,6 @@ const skills = [
   {
     category: "DEVOPS & OS",
     items: ["Git", "GitHub", "Vercel", "Linux", "Bash"],
-  },
-  {
-    category: "AI / ML (Basic)",
-    items: ["OpenAI API", "Supervised Learning", "Prompt Engineering"],
   },
 ];
 

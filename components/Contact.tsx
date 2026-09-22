@@ -1,31 +1,33 @@
 export default function Contact() {
-  const whatsappNumber = "919627658273"; // ← apna WhatsApp number (country code ke saath, no +)
-  const email = "nishant4567128@gmail.com";   // ← apna email
+  const whatsappNumber = "919627658273";
+  const email = "usenishant@gmail.com";
 
   const whatsappMessage = encodeURIComponent(
     "Hi Nishant! I found your portfolio and would like to connect."
   );
 
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+    "Let's Connect"
+  )}&body=${encodeURIComponent(
+    "Hi Nishant,\n\nI found your portfolio and would like to connect.\n\n"
+  )}`;
+
   return (
     <section id="contact" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         
-        {/* Heading */}
         <div className="flex items-end justify-between mb-12">
           <h2 className="mono text-2xl md:text-3xl font-bold">
             <span className="text-[#DC143C]">&gt;</span> CONTACT
           </h2>
         </div>
 
-        {/* Divider */}
         <div className="dotted-red mb-12" />
 
-        {/* Tagline */}
         <p className="text-neutral-300 text-lg md:text-xl mb-12 max-w-xl">
           Let&apos;s build something intelligent together.
         </p>
 
-        {/* Buttons */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
           
           {/* WhatsApp */}
@@ -36,7 +38,6 @@ export default function Contact() {
             className="group flex items-center justify-between gap-4 px-6 py-5 border border-[#1F1F1F] hover:border-[#25D366] hover:bg-[#0A1A0F] hover:shadow-[0_0_25px_rgba(37,211,102,0.15)] transition-all"
           >
             <div className="flex items-center gap-4">
-              {/* WhatsApp Icon */}
               <svg
                 className="w-6 h-6 text-[#25D366]"
                 fill="currentColor"
@@ -58,13 +59,14 @@ export default function Contact() {
             </span>
           </a>
 
-          {/* Email */}
+          {/* Email → Gmail */}
           <a
-            href={`mailto:${email}?subject=Let's Connect&body=Hi Nishant,%0D%0A%0D%0AI found your portfolio and would like to connect.`}
+            href={gmailComposeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group flex items-center justify-between gap-4 px-6 py-5 border border-[#1F1F1F] hover:border-[#DC143C] hover:bg-[#1A0000] hover:shadow-[0_0_25px_rgba(220,20,60,0.15)] transition-all"
           >
             <div className="flex items-center gap-4">
-              {/* Email Icon */}
               <svg
                 className="w-6 h-6 text-[#DC143C]"
                 fill="none"

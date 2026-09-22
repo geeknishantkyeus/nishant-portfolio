@@ -2,19 +2,18 @@ export default function CurrentWork() {
   const items = [
     {
       label: "Building",
-      title: "Secure web applications",
-      tech: "Next.js · Node.js · MongoDB",
+      title: "Web3 Security Research",
+      tech: "Smart Contracts · Web2 Stack · Cybersecurity",
     },
     {
       label: "Learning",
-      title: "Penetration Testing · Bug Bounty · Cloud Security",
-      tech: "",
+      title: "Ethical Hacking · Red Team Operations",
+      tech: "Offensive Security · OSINT · Blockchain Security",
     },
     {
-      label: "Writing",
-      title: "Security & web dev tutorials on Medium",
+      label: "Open To",
+      title: "Internships · Freelance · Collaborations",
       tech: "",
-      link: "#blog",
     },
   ];
 
@@ -39,16 +38,7 @@ export default function CurrentWork() {
               </span>
               <div>
                 <p className="text-neutral-200 text-lg">
-                  {item.link ? (
-                    <a
-                      href={item.link}
-                      className="hover:text-[#DC143C] transition-colors"
-                    >
-                      {item.title} →
-                    </a>
-                  ) : (
-                    item.title
-                  )}
+                  {item.title}
                 </p>
                 {item.tech && (
                   <p className="mono text-sm text-neutral-500 mt-1">

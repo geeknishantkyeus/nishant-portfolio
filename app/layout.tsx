@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,6 +10,13 @@ const inter = Inter({
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
 });
 
 const siteUrl = "https://www.geeknishant.tech";
@@ -66,7 +73,7 @@ export const metadata: Metadata = {
     description:
       "Cybersecurity student & Full Stack Developer. Building secure web apps.",
     images: [`${siteUrl}/og-image.png`],
-    creator: "@yourhandle", // ← apna X handle
+    creator: "@yourhandle",
   },
   robots: {
     index: true,
@@ -88,7 +95,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jetbrains.variable}`}
+      className={`${inter.variable} ${jetbrains.variable} ${instrumentSerif.variable}`}
       suppressHydrationWarning
     >
       <body

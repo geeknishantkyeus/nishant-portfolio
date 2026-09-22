@@ -3,16 +3,12 @@ const milestones = [
     year: "2026",
     items: [
       {
-        title: "Building AI Study Assistant",
-        subtitle: "RAG-based study tool",
+        title: "Exploring Web3 Security",
+        subtitle: "Smart Contracts · Blockchain Security",
       },
       {
-        title: "Started writing on Medium",
-        subtitle: "Sharing AI dev journey",
-      },
-      {
-        title: "SIH Hackathon Participant",
-        subtitle: "Built Krishi Sakhi — AI chatbot",
+        title: "Learning Ethical Hacking & Red Team",
+        subtitle: "Offensive Security · OSINT",
       },
     ],
   },
@@ -20,12 +16,12 @@ const milestones = [
     year: "2025",
     items: [
       {
-        title: "B.Tech CSE Started",
+        title: "Started B.Tech CSE",
         subtitle: "REC Sonbhadra",
       },
       {
-        title: "Completed 10+ Personal Projects",
-        subtitle: "HTML, CSS, JS, React, PHP, SQL",
+        title: "Completed 12th (Science - Maths)",
+        subtitle: "BSGM Inter College ",
       },
     ],
   },
@@ -33,12 +29,25 @@ const milestones = [
     year: "2024",
     items: [
       {
-        title: "Completed 12th (Science - Maths)",
-        subtitle: "BSGM Inter College, Siyana",
+        title: "Built 3 Web Projects",
+        subtitle: "HTML · CSS · JavaScript · React",
       },
       {
-        title: "Built Growthke (Class 10th)",
+        title: "Learned Full Stack Development",
+        subtitle: "PHP · SQL · MongoDB · Express",
+      },
+    ],
+  },
+  {
+    year: "2023",
+    items: [
+      {
+        title: "Built Growthke",
         subtitle: "Learning platform for students",
+      },
+      {
+        title: "Started Coding Journey",
+        subtitle: "HTML · CSS · JavaScript basics",
       },
     ],
   },

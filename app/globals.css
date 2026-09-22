@@ -27,6 +27,10 @@ body {
   font-family: var(--font-inter), sans-serif;
 }
 
+.font-serif {
+  font-family: var(--font-serif), serif;
+}
+
 .mono {
   font-family: var(--font-jetbrains), monospace;
 }
