@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Project = {
   name: string;
   description: string;
@@ -5,17 +7,18 @@ type Project = {
   live?: string;
   source?: string;
   status?: "live" | "building" | "archived";
-  category?: "Full Stack" | "Security" | "AI";
+  category?: "Full Stack" | "Security" | "Web3" | "AI";
 };
 
-const projects: Project[] = [
+// Saare projects (baad mein /projects page pe use honge)
+export const allProjects: Project[] = [
   {
     name: "Growthke",
     description:
       "Full stack learning platform with secure authentication and personalized learning paths.",
     tech: ["React", "Node.js", "MongoDB", "JWT"],
-    live: "#", // ← apna actual
-    source: "#", // ← apna actual
+    live: "#",
+    source: "#",
     status: "live",
     category: "Full Stack",
   },
@@ -34,9 +37,18 @@ const projects: Project[] = [
     description:
       "Python-based tool for network reconnaissance — host discovery, port scanning, and service detection using Nmap.",
     tech: ["Python", "Nmap", "Networking"],
-    source: "#", // ← jab banao
+    source: "#",
     status: "building",
     category: "Security",
+  },
+  {
+    name: "Web3 Security Research",
+    description:
+      "Researching smart contract vulnerabilities and Web3 security patterns.",
+    tech: ["Solidity", "Web3", "Security"],
+    source: "#",
+    status: "building",
+    category: "Web3",
   },
   {
     name: "AI Study Assistant",
@@ -47,9 +59,21 @@ const projects: Project[] = [
     status: "building",
     category: "AI",
   },
+  {
+    name: "Password Strength Analyzer",
+    description:
+      "Tool to analyze password strength using entropy calculation and common patterns detection.",
+    tech: ["Python", "Security"],
+    source: "#",
+    status: "building",
+    category: "Security",
+  },
 ];
 
 export default function Projects() {
+  // Home pe sirf 4 dikhao
+  const projects = allProjects.slice(0, 4);
+
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
@@ -59,7 +83,7 @@ export default function Projects() {
             <span className="text-[#DC143C]">&gt;</span> PROJECTS
           </h2>
           <span className="mono text-sm text-neutral-500">
-            {projects.length} total
+            {projects.length} of {allProjects.length}
           </span>
         </div>
 
@@ -137,6 +161,16 @@ export default function Projects() {
 
             </div>
           ))}
+        </div>
+
+        {/* View More Button */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/projects"
+            className="mono text-sm px-6 py-3 border border-[#8B0000] text-[#EDEDED] hover:bg-[#1A0000] hover:border-[#DC143C] hover:shadow-[0_0_20px_rgba(220,20,60,0.3)] transition-all inline-block"
+          >
+            [ View All Projects → ]
+          </Link>
         </div>
 
       </div>

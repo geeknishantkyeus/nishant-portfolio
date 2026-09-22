@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const links = [
   { href: "#projects", label: "projects" },
@@ -12,12 +14,34 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Smart navigation
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    setMenuOpen(false);
+
+    // Agar home page pe ho
+    if (pathname === "/") {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Kisi aur page pe ho — home pe jao, phir scroll karo
+      router.push(`/${href}`);
+    }
+  };
 
   return (
     <nav
@@ -30,7 +54,7 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo */}
-        <a href="#top" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/logo.svg"
             alt="Nishant Kumar logo"
@@ -41,7 +65,7 @@ export default function Navbar() {
           <span className="mono text-sm md:text-base text-[#EDEDED] group-hover:text-[#DC143C] transition-colors">
             Nishant Kumar
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
@@ -49,7 +73,8 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="mono text-sm text-neutral-400 hover:text-[#DC143C] relative group transition-colors"
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="mono text-sm text-neutral-400 hover:text-[#DC143C] relative group transition-colors cursor-pointer"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#DC143C] group-hover:w-full transition-all duration-300" />
@@ -75,8 +100,8 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="mono text-sm text-neutral-400 hover:text-[#DC143C] transition-colors"
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="mono text-sm text-neutral-400 hover:text-[#DC143C] transition-colors cursor-pointer"
               >
                 <span className="text-[#DC143C]">→</span> {link.label}
               </a>
